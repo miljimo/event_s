@@ -1,5 +1,5 @@
-from event     import Event;
-from publisher import Publisher;
+from events.event     import Event;
+from events.publisher import Publisher;
 
 class EventHandler(object):
     def __init__(self, publisher = None):
@@ -20,6 +20,10 @@ class EventHandler(object):
             self.__publish.UnSubscribe(other);
         return self;
     
+    @property
+    def Count(self):
+        return self.__publisher.Count;
+    
 
 if(__name__ == "__main__"):
     def OnTest(event):
@@ -27,3 +31,4 @@ if(__name__ == "__main__"):
     handler  = EventHandler();
     handler+= OnTest;
     handler(Event(892));
+    print(handler.Count);

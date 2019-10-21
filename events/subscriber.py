@@ -1,4 +1,4 @@
-from event import Event;
+from events.event import Event;
 
 """
  The class for a class listener event;

@@ -1,5 +1,4 @@
-from event import Event;
-from namedobject import NamedObject;
+from events.event import Event, NamedObject;
 
 """
   The publisher class.
@@ -9,6 +8,11 @@ class Publisher(NamedObject):
     def __init__(self, name= "untitled"):
         NamedObject.__init__(self, name);
         self.__subscribers = list();
+        
+    @property
+    def Count(self):
+        return len(self.__subscribers);
+    
 
     def Publish(self ,event):
         nitems =   0;
@@ -68,4 +72,5 @@ if(__name__== "__main__"):
     p = Publisher();
     p.Subscribe(OnTest);
     p.Publish(Event(89));
+    print(p.Count);
     
