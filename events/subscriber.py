@@ -1,11 +1,13 @@
-from events.event import Event;
+from events.baseobject  import BaseObject;
+from events.event       import Event;
 
 """
  The class for a class listener event;
 """
-class Subscriber(object):
+class Subscriber(BaseObject):
 
     def __init__(self):
+        super().__init__();
         pass;
     
     def __call__(self, event):

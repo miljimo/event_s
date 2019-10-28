@@ -1,7 +1,8 @@
+from events.baseobject import BaseObject;
 from events.event     import Event;
 from events.publisher import Publisher;
 
-class EventHandler(object):
+class EventHandler(BaseObject):
     def __init__(self, publisher = None):
         self.__publisher = publisher if (isinstance(publisher, Publisher)) else Publisher("EventHandler");
         

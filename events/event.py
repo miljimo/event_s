@@ -1,35 +1,13 @@
 import os;
-
-
-class NamedObject(object):
-    __UUID = 0;
-    
-    def __init__(self, name):
-        self.__name  = name;
-        self.__id    = self.__UUID + 1;
-        
-    @property
-    def Name(self):
-        return self.__name;
-
-    @Name.setter
-    def Name(self, value):
-
-        if(type(value) != str):
-             raise ValueError("Unexpected value provided");
-        self.__name  = value;
-        
-
-    @property
-    def ID(self):
-        return self.__id;
+from  events.baseobject import BaseObject;
 
 """
  The base class of all the event objects.
 """
-class Event(object):
+class Event(BaseObject):
 
     def __init__(self, typeid ):
+        super().__init__();
         self.__typeid  = typeid;
         self.__stopPropagation = False;
 
@@ -52,7 +30,10 @@ class Event(object):
 """
 if(__name__ =="__main__"):
     event  = Event(89);
+    event2 = Event(81);
     print(event.Type);
     print(event.StopPropagation);
     event.StopPropagation = True;
     print(event.StopPropagation);
+    print(event.ID);
+    print(event2.ID);

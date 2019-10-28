@@ -1,12 +1,14 @@
-from events.event import Event, NamedObject;
+from events.baseobject  import BaseObject;
+from events.event       import Event;
 
 """
   The publisher class.
 """
-class Publisher(NamedObject):
+class Publisher(BaseObject):
 
     def __init__(self, name= "untitled"):
-        NamedObject.__init__(self, name);
+        super().__init__();
+        self.Name  =  name;
         self.__subscribers = list();
         
     @property
