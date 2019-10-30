@@ -1,5 +1,5 @@
-from events.baseobject  import BaseObject;
-from events.event       import Event;
+from events  import BaseObject, Event;
+
 
 """
   The publisher class.

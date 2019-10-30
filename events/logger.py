@@ -1,8 +1,8 @@
 import os;
 import ctypes;
 from threading import Thread;
-from events.event import Event;
-from events.eventhandler import EventHandler;
+from events import Event,EventHandler;
+
 
 
 

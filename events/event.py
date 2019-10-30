@@ -1,5 +1,5 @@
 import os;
-from  events.baseobject import BaseObject;
+from  events import BaseObject;
 
 """
  The base class of all the event objects.

@@ -1,6 +1,5 @@
-from events.baseobject import BaseObject;
-from events.event     import Event;
-from events.publisher import Publisher;
+from events import BaseObject, Event, Publisher;
+
 
 class EventHandler(BaseObject):
     def __init__(self, publisher = None):
