@@ -6,7 +6,7 @@ from events  import BaseObject, Event;
 """
 class Publisher(BaseObject):
 
-    def __init__(self, name= "untitled"):
+    def __init__(self, name:str = "untitled"):
         super().__init__();
         self.Name  =  name;
         self.__subscribers = list();
@@ -16,7 +16,7 @@ class Publisher(BaseObject):
         return len(self.__subscribers);
     
 
-    def Publish(self ,event):
+    def Publish(self ,event:Event):
         nitems =   0;
         
         if(isinstance(event , Event)):

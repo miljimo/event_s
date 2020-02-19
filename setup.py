@@ -12,9 +12,7 @@ setuptools.setup(name = "events-jimobama",
       author="Obaro I. Johnson",
       author_email="johnson.obaro@hotmail.com",
       packages=setuptools.find_packages(),
-      install_requires=['mpi4py>=2.0',
-                        
-                       ],
+      install_requires=[],
       classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
