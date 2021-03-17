@@ -1,4 +1,4 @@
-from events  import BaseObject, Event;
+from jimobama_events  import BaseObject, Event;
 """
  The class for a class listener event;
 """

@@ -1,5 +1,5 @@
 import os;
-from  events import BaseObject;
+from  jimobama_events import BaseObject;
 
 """
  The base class of all the event objects.
@@ -28,7 +28,7 @@ class Event(BaseObject):
 """
  Test the event class.
 """
-if(__name__ =="__main__"):
+if(__name__ =="__main__"):    
     event  = Event(89);
     event2 = Event(81);
     print(event.Type);

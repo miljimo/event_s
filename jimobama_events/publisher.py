@@ -1,14 +1,14 @@
-from events  import BaseObject, Event;
+from jimobama_events  import BaseObject, Event;
 
 
 """
-  The publisher class.
+  @Publisher : event listener and propagate the events to all the listing objects.
 """
 class Publisher(BaseObject):
 
-    def __init__(self, name= "untitled"):
+    def __init__(self, name:str = "untitled"):
         super().__init__();
-        self.Name  =  name;
+        self.Name          =  name;
         self.__subscribers = list();
         
     @property
@@ -16,9 +16,8 @@ class Publisher(BaseObject):
         return len(self.__subscribers);
     
 
-    def Publish(self ,event):
-        nitems =   0;
-        
+    def Publish(self ,event:Event):
+        nitems =   0;        
         if(isinstance(event , Event)):
             for sub in self.__subscribers:
                 if(sub != None):

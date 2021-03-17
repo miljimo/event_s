@@ -3,7 +3,7 @@ long_description = "Unable to load decription";
 with open("README.md", "r") as fh:
     long_description = fh.read()
     
-setuptools.setup(name = "events-jimobama",
+setuptools.setup(name = "jimobama_events",
       version="0.0.1",
       description="C# like event handler (pubsub)",
       long_description =long_description,

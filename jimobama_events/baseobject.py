@@ -18,6 +18,10 @@ class BaseObject(object):
         self.__name             = self.__id;
         
     @property
+    def number_created():
+        return BaseObject.__OBJECT_COUNTS__
+        
+    @property
     def Name(self):
         return self.__name;
 
@@ -41,7 +45,7 @@ class ScopeTimer(object):
             self.Clock     =  time.time();
         self.__starttimer  =  self.Clock();
         self.__funcName    =  funcName;
-        self.__filename    = filename;
+        self.__filename    =  filename;
 
     @property
     def Elapse(self):
